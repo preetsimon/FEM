@@ -3,16 +3,16 @@ import Logo from "./Logo";
 import Navbar from "./Navbar";
 import MenuButton from "./MenuButton";
 
-const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+const Header = ({ isOpen, setIsOpen }) => {
+  // const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    if (window.innerWidth > 768) {
-      setIsOpen(true);
-    } else {
-      setIsOpen(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.innerWidth > 768) {
+  //     setIsOpen(true);
+  //   } else {
+  //     setIsOpen(false);
+  //   }
+  // }, []);
 
 
 

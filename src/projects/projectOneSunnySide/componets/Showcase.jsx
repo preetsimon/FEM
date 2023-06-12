@@ -1,9 +1,9 @@
 import arrow from "../assets/icon-arrow-down.svg";
 
-const Showcase = () => {
+const Showcase = ({ isOpen, setIsOpen }) => {
   return (
     <>
-      <section className="showcase">
+      <section onClick={()=>setIsOpen(false)} className="showcase">
         <div className="overlay">
           <h1 className="text-4xl uppercase text-white tracking-widest p-2.5 flex items-center justify-center">
             We are creatives

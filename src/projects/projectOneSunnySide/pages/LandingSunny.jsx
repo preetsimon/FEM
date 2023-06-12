@@ -10,11 +10,26 @@ import GridDesktop from "../componets/GridDesktop";
 import GridMobile from "../componets/GridMobile";
 import Footer from "../componets/Footer";
 
+import { useState, useEffect } from "react";
+
+
 const LandingSunny = () => {
+
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, []);
+
+
   return (
     <>
-      <Header />
-      <Showcase />
+      <Header isOpen={isOpen} setIsOpen={setIsOpen}/>
+      <Showcase isOpen={isOpen} setIsOpen={setIsOpen} />
       <Transform />
       <StandOut />
       <div className="block md:hidden">
