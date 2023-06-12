@@ -1,19 +1,40 @@
-import Logo from "./Logo"
-import MenuButton from "./MenuButton"
+import { useState, useEffect } from "react";
+import Logo from "./Logo";
+import Navbar from "./Navbar";
+import MenuButton from "./MenuButton";
 
-function Header() {
+const Header = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 768) {
+      setIsOpen(true);
+    } else {
+      setIsOpen(false);
+    }
+  }, []);
+
+
+
   return (
-   <>
-   <header className="absolute w-full p-5 flex items-center justify-between">
-    <div>
-        <Logo/>
-    </div>
-    <div>
-        <MenuButton/>
-    </div>
-   </header>
-   </>
-  )
-}
+    <>
+      <header className="absolute w-full flex items-center justify-between p-5">
+        <div>
+          <Logo />
+        </div>
 
-export default Header
+        {isOpen && (
+          <nav>
+            <Navbar />
+          </nav>
+        )}
+
+        <div className="md:hidden">
+          <MenuButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        </div>
+      </header>
+    </>
+  );
+};
+
+export default Header;

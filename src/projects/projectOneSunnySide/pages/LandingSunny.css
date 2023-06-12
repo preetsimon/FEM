@@ -6,7 +6,7 @@
 :root {
   --soft-red: hsl(7, 99%, 70%);
   --yellow: hsl(51, 100%, 49%);
-  --graphic-design-text: hsl(167, 40%, 24%);
+  --graphic-design-text: #25564b;
   --photography-text: hsl(198, 62%, 26%);
   --footer: hsl(168, 34%, 41%);
 
@@ -37,9 +37,49 @@ h4,
 h5,
 h6 {
   font-family: "Fraunces", sans-serif;
+  color: var(--very-dark-desaturated-blue);
 }
 .sunny__wrapper {
   font-family: "Barlow", sans-serif;
+}
+
+/* buttons */
+button {
+    font-family: "Fraunces", sans-serif;
+}
+
+.btn-cta {
+    font-family: "Fraunces", sans-serif;
+    background-color: var(--white);
+    color: var(--very-dark-desaturated-blue);
+    border: 2px solid var(--white);
+    padding: 10px;
+    border-radius: 30px;
+    transition: background-color 0.4s ease-in-out;
+  }
+  
+  .btn-cta:hover {
+    cursor: pointer;
+    background-color: var(--graphic-design-text);
+    color: var(--white);
+    border: 2px solid var(--graphic-design-text);
+  }
+  
+.btn-transform {
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  border-bottom: 6px solid var(--yellow);
+}
+
+.btn-standout {
+  color: var(--very-dark-desaturated-blue);
+  text-transform: uppercase;
+  border-bottom: 6px solid var(--soft-red);
+}
+
+/* testtimonial */
+.testimonials-header {
+    color: var(--dark-grayish-blue);
 }
 
 /* Showcase */
@@ -50,16 +90,26 @@ h6 {
 }
 
 .showcase .overlay {
-    height: 512px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  height: 512px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-@media (min-width:768px) {
-    .showcase {
-        background: url("../assets/desktop/image-header.jpg") no-repeat center/cover;
-        height: 512px;
-      }
+/* Footer */
+
+.footer {
+    background-color: var(--footer);
+}
+
+.footer ul li {
+    color: var(--graphic-design-text);
+}
+
+@media (min-width: 768px) {
+  .showcase {
+    background: url("../assets/desktop/image-header.jpg") no-repeat center/cover;
+    height: 512px;
+  }
 }
