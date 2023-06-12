@@ -1,9 +1,13 @@
-import menu from "../assets/icon-hamburger.svg";
+import menu from "../assets/icon-hamburger.svg"
 
-const MenuButton = () => {
-  return <>
-  <button><img src={menu}></img></button>
-  </>;
-};
+const MenuButton = ({ isOpen, setIsOpen }) => {
+  return (
+    <>
+      <button onClick={() => setIsOpen(!isOpen)}>
+        <img src={menu} alt="" />
+      </button>
+    </>
+  )
+}
 
-export default MenuButton;
+export default MenuButton
