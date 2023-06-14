@@ -28,6 +28,7 @@ img {
 p {
   line-height: 1.6;
   font-size: 18px;
+  overflow: hidden;
 }
 
 h1,
