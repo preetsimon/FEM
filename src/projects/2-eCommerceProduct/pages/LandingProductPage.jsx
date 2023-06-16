@@ -9,8 +9,6 @@ import plus from "../assets/icon-plus.svg";
 import Lightbox from "../components/LightBox";
 import Header from "../components/Header";
 
-
-
 export const LandingProductPage = () => {
   const [products] = useState(data);
   let [value, setValue] = useState(0);
@@ -52,8 +50,15 @@ export const LandingProductPage = () => {
         <article>
           <div className="lg:hidden">
             {products.map((item, index) => (
-              <div key={index} className={slideIndex==index+1?"relative":"hidden"}>
-                <img src={item.mainImage} alt="" className="w-full lg:rounded-2xl" />
+              <div
+                key={index}
+                className={slideIndex == index + 1 ? "relative" : "hidden"}
+              >
+                <img
+                  src={item.mainImage}
+                  alt=""
+                  className="w-full lg:rounded-2xl"
+                />
                 <ul className="lg:hidden">
                   <li>
                     <button
@@ -77,7 +82,7 @@ export const LandingProductPage = () => {
             ))}
           </div>
 
-{/* large screen product image */}
+          {/* large screen product image */}
           <div className="hidden lg:block">
             <img
               src={mainImage}
