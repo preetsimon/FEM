@@ -7,8 +7,8 @@ function App() {
 
   return (
     <>
-     {/* <LandingSunny/> */}
-     <LandingProductPage/>
+     <LandingSunny/>
+     {/* <LandingProductPage/> */}
     </>
   )
 }
