@@ -18,7 +18,7 @@ const Header = ({ isOpen, setIsOpen }) => {
 
   return (
     <>
-      <header className="absolute w-full flex items-center justify-between p-5">
+      <header className="absolute w-full flex items-center justify-between px-10 my-2">
         <div>
           <Logo />
         </div>
